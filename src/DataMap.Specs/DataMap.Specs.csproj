@@ -58,6 +58,12 @@
     <Compile Include="Model\SimplePoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataMap\DataMap.csproj">
+      <Project>{f8b3f836-0a09-4f0c-bf69-264588c98411}</Project>
+      <Name>DataMap</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
