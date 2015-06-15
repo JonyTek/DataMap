@@ -18,22 +18,23 @@ return someCollection;
 And get the same result with a simple
 
 ```csharp
-retun dataSet.ToEnumerable<Thing>(1);
+retun dataSet.ToEnumerable<Thing>();
 ```
 
-Data transformation make use of Reflection to easily map properties to columns based either a matching name or a custom attribute.
+Data transformations make use of Reflection to easily map properties to columns based on either a matching name or a custom attribute.
 
 e.g.
 
 ```csharp
 public class SimplePoco
-    {
-        //Matching field name
-        public int Id { get; set; }
-
-        [MapTo("columnName")]
-        public string Name { get; set; }
-    }
+{
+	//Matching field name
+	public int Id { get; set; }
+	
+	//Explicit map
+	[MapTo("columnName")]
+	public string Name { get; set; }
+}
 ```
 
 Additional extension methods:
