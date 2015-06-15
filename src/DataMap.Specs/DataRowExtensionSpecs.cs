@@ -105,7 +105,7 @@ namespace DataMap.Specs
             table.Columns.Add("DateTime", typeof(DateTime));
             table.Rows.Add(date);
 
-            var single = table.ToFirsRow<SimplePoco>();
+            var single = table.ToFirstRow<SimplePoco>();
 
             Assert.AreEqual(date, single.DateTime);
         }

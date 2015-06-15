@@ -23,7 +23,7 @@ namespace DataMap.Extensions
             return table.IsEmpty() ? null : table.ForEachRow(row => row.To<T>());
         }
 
-        public static T ToFirsRow<T>(this DataTable table)
+        public static T ToFirstRow<T>(this DataTable table)
             where T : class, new()
         {
             return table.IsEmpty() ? null : table.Rows[0].To<T>();
