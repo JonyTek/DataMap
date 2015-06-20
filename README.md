@@ -40,14 +40,39 @@ public class SimplePoco
 Additional extension methods:
 ```csharp
 //DataSet
-IEnumerable<T> ToEnumerable<T>(this DataSet dataSet, int tableIndex = 0)
+IEnumerable<T> ForEachRow<T>(this DataSet dataSet, Func<DataRow, T> function, int tableIndex = 0)
+
+IEnumerable<T> ForEachPoco<T>(this DataSet dataSet, Func<T, T> function, int tableIndex = 0)
+
+IEnumerable<T> Where<T>(this DataSet dataSet, Func<T, bool> function, int tableIndex = 0)
+
+IEnumerable<T> SelectColumn<T>(this DataSet dataSet, string columnName, int tableIndex = 0)
+
+IEnumerable<T> ToEnumerableOf<T>(this DataSet dataSet, int tableIndex = 0)
+
+T FirstOrDefault<T>(this DataSet dataSet, int tableIndex = 0)
+
+bool IsEmpty(this DataSet dataSet)
+
+bool IsNotEmpty(this DataSet dataSet)
+
+bool IsNotEmpty(this DataSet dataSet)
+
+bool WithinRange(this DataSet dataSet, int tableIndex)
 
 //DataTable
+
 IEnumerable<T> ForEachRow<T>(this DataTable table, Func<DataRow, T> function)
+
+IEnumerable<T> ForEachPoco<T>(this DataTable table, Func<T, T> function)
+
+IEnumerable<T> Where<T>(this DataTable table, Func<T, bool> function)
+
+IEnumerable<T> SelectColumn<T>(this DataTable table, string columnName)
 
 IEnumerable<T> ToEnumerableOf<T>(this DataTable table)
 
-T ToFirstRow<T>(this DataTable table)
+T FirstOrDefault<T>(this DataTable table)
 
 bool IsEmpty(this DataTable table)
 
@@ -59,8 +84,8 @@ T To<T>(this DataRow row)
 
 Project comes with full unit test coverage for types:
 
-int
-string
+ **int
+ **string
 guid
 enum
 float
