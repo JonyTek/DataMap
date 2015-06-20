@@ -98,6 +98,9 @@ namespace DataMap.Extensions
             return table.IsEmpty() ? null : table.ForEachRow(row => row.To<T>());
         }
 
+<<<<<<< Updated upstream
+        public static T ToFirstRow<T>(this DataTable table)
+=======
         /// <summary>
         /// Get first row as poco
         /// </summary>
@@ -105,6 +108,7 @@ namespace DataMap.Extensions
         /// <param name="table"></param>
         /// <returns></returns>
         public static T FirstOrDefault<T>(this DataTable table)
+>>>>>>> Stashed changes
             where T : class, new()
         {
             return table.IsEmpty() ? null : table.Rows[0].To<T>();

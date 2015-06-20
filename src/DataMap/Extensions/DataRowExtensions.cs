@@ -1,17 +1,22 @@
 ﻿using System.Data;
-using DataMap.Helpers;
 
 namespace DataMap.Extensions
 {
     public static class DataRowExtensions
     {
+        /// <summary>
+        /// Perform data row to poco conversion
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="row"></param>
+        /// <returns></returns>
         public static T To<T>(this DataRow row)
-            where T : new()
+            where T : class, new()
         {
-            Validation.NotNull(row);
+            if (row == null) return null;
 
             var poco = new T();
-            var columns = row.Table.Columns;            
+            var columns = row.Table.Columns;
             var properties = poco.GetPublicProperties();
 
             foreach (var property in properties)

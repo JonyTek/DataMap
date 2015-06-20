@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Linq;
+using System.Data;
 
 namespace DataMap.Helpers
 {
     internal static class Validation
     {
-        internal static void NotNull(params object[] objects)
+        /// <summary>
+        /// Throw exception if table index is out of range
+        /// </summary>
+        /// <param name="dataSet"></param>
+        /// <param name="tableIndex"></param>
+        internal static void TableWithinRange(DataSet dataSet, int tableIndex)
         {
-            foreach (var o in objects.Where(o => o == null))
+            if (tableIndex > dataSet.Tables.Count)
             {
-                throw new ArgumentException(o.GetType().FullName);
+                throw new ArgumentOutOfRangeException("tableIndex");
             }
-        }
-
-        internal static void IsTrue(bool isTrue, string message)
-        {
-            if (!isTrue) throw new ArgumentException(message);
         }
     }
 }

@@ -105,7 +105,11 @@ namespace DataMap.Specs
             table.Columns.Add("DateTime", typeof(DateTime));
             table.Rows.Add(date);
 
+<<<<<<< Updated upstream
+            var single = table.ToFirstRow<SimplePoco>();
+=======
             var single = table.FirstOrDefault<SimplePoco>();
+>>>>>>> Stashed changes
 
             Assert.AreEqual(date, single.DateTime);
         }

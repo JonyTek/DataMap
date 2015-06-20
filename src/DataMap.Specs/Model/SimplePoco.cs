@@ -27,6 +27,13 @@ namespace DataMap.Specs.Model
 
         [MapTo("DateTime")]
         public DateTime DateTime { get; set; }
+
+        public SimplePoco SetName(string name)
+        {
+            Name = name;
+
+            return this;
+        }
     }
 
     public enum AEnum
