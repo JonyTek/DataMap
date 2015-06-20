@@ -84,13 +84,13 @@ T To<T>(this DataRow row)
 
 Project comes with full unit test coverage for types:
 
- **int
- **string
-guid
-enum
-float
-bool
-dateTime
+*int
+*string
+*guid
+*enum
+*float
+*bool
+*dateTime
 
 Enjoy...
 
