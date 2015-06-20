@@ -56,8 +56,6 @@ bool IsEmpty(this DataSet dataSet)
 
 bool IsNotEmpty(this DataSet dataSet)
 
-bool IsNotEmpty(this DataSet dataSet)
-
 bool WithinRange(this DataSet dataSet, int tableIndex)
 
 //DataTable
