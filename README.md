@@ -18,7 +18,7 @@ return someCollection;
 And get the same result with a simple
 
 ```csharp
-retun dataSet.ToEnumerable<Thing>();
+return dataSet.ToEnumerable<Thing>();
 ```
 
 Data transformations make use of Reflection to easily map properties to columns based on either a matching name or a custom attribute.
@@ -59,7 +59,6 @@ bool IsNotEmpty(this DataSet dataSet)
 bool WithinRange(this DataSet dataSet, int tableIndex)
 
 //DataTable
-
 IEnumerable<T> ForEachRow<T>(this DataTable table, Func<DataRow, T> function)
 
 IEnumerable<T> ForEachPoco<T>(this DataTable table, Func<T, T> function)
