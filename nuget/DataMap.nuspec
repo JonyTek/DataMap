@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DataMap</id>
+	<title>DataMap</title>
+	<summary>Data transformations make use of Reflection to easily map properties to columns based on either a matching name or a custom attribute.</summary>
+    <version>1.0.0</version>
+    <authors>Jony Tek</authors>
+    <owners>Jony Tek</owners>
+	<projectUrl>https://github.com/JonyTek/DataMap</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple set of extension methods that allow for easy ADO.Net DataSet => POCO transformations.</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>C# Ado.Net DataSet DataTable Reflection Transformation</tags>
+  </metadata>
+</package>

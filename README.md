@@ -1,6 +1,12 @@
 # DataMap
 A simple set of extension methods that allow for easy ADO.Net DataSet => POCO transformations.
 
+### NuGet Packages
+
+```
+PM> Install-Package SimpleSpecification
+```
+
 Get away from code such as
 
 ```csharp
@@ -18,7 +24,7 @@ return someCollection;
 And get the same result with a simple
 
 ```csharp
-return dataSet.ToEnumerable<Thing>();
+return dataSet.ToEnumerable<SimplePoco>();
 ```
 
 Data transformations make use of Reflection to easily map properties to columns based on either a matching name or a custom attribute.
