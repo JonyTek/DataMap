@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace DataMap.Extensions
 {
@@ -25,6 +26,9 @@ namespace DataMap.Extensions
                 if (columns.Contains(name))
                 {
                     var dataValue = row[name];
+                    
+                    if (dataValue is DBNull) continue;
+
                     property.SetValue(poco, dataValue, null);
                 }
             }
